@@ -1,0 +1,74 @@
+$primary: #1d5aa6;
+$secondary: #22b78e;
+$pink: #dd5a6a;
+
+@mixin h1styles {
+  font-size: 26px;
+  font-family: "Stag Sans Light";
+  font-weight: 300;
+  line-height: 34px;
+}
+
+@mixin h2styles {
+  font-size: 31px;
+  font-family: "Stag Sans Medium";
+  font-weight: 500;
+  line-height: 40px;
+}
+@mixin h3styles {
+  font-size: 22px;
+  font-family: "Stag Sans Medium";
+}
+
+@mixin h5styles {
+  font-family: "Stag Sans Medium";
+  letter-spacing: 1px;
+}
+
+@mixin h6styles {
+  font-family: "Stag Sans Light";
+}
+@mixin pstyles {
+  font-family: "Stag Sans Light";
+  font-size: 14px;
+}
+@mixin listyles {
+  font-size: 14px;
+  font-family: "Stag Sans Light";
+  font-weight: 600;
+  padding-left: 20px;
+}
+@mixin bannerButton {
+  font-family: "Stag Sans Light";
+  background-color: $pink;
+  border-radius: 3.2px;
+  width: 186px;
+  height: 45px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+@mixin mt3 {
+  margin-top: 80px !important;
+  margin-bottom: 60px;
+}
+
+@mixin hr-line {
+  border-bottom: 1px solid #ececff;
+}
+
+@mixin primary-btn {
+  font-size: 15px;
+  font-family: "Stag Sans Light";
+  text-decoration: none;
+  border-radius: 4px;
+  width: 129px;
+  height: 49px;
+  padding: 15px;
+  font-weight: 600;
+  color: white;
+  background-image: linear-gradient(-35deg, #6078ea 0%, #2ec4b8);
+}

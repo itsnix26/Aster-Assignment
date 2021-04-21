@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Stag Sans Medium';
+  src: url("../font/StagSans-Medium.woff") format("woff"), url("../font/StagSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stag Sans Light';
+  src: url("../font/StagSans-Light.woff") format("woff"), url("../font/StagSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+/*# sourceMappingURL=fonts.css.map */

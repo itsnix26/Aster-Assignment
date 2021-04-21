@@ -1,0 +1,616 @@
+@import "fonts.scss";
+@import "mixin.scss";
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  @include h1styles;
+}
+
+h2 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+}
+
+/* Banner slider styles */
+.enquire {
+  position: absolute;
+  top: 2%;
+  right: 12%;
+  max-width: 360px;
+  height: auto;
+  padding: 24px 30px;
+  background-color: #ffffff;
+  @media (max-width: 1125px) {
+    right: 20px;
+  }
+  @media (max-width: 768px) {
+    right: -360px !important;
+    transition: 0.5s;
+  }
+  h3 {
+    font-size: 20px;
+    font-family: "Stag Sans Medium";
+    color: #213559;
+    padding-bottom: 24px;
+  }
+
+  input {
+    font-size: 13px;
+    font-family: "Stag Sans Light";
+    border: 0.87px solid #d0d0d0;
+    width: 100%;
+    height: 42px;
+    margin-bottom: 12px;
+    padding: 20px;
+  }
+
+  input[type="submit"] {
+    @include bannerButton;
+    font-family: "Stag Sans Medium" !important;
+    width: 50%;
+    height: 58px;
+    letter-spacing: 1px;
+    margin: 12px 0 0 0;
+  }
+
+  textarea {
+    font-size: 13px;
+    font-family: "Stag Sans Light";
+    border: 0.87px solid #d0d0d0;
+    width: 100%;
+    height: 72px;
+    margin-bottom: 12px;
+    padding: 20px;
+  }
+}
+
+.enquire.active {
+  @media (max-width: 768px) {
+    right: 30px !important;
+    .toggle.active::before {
+      content: "\f00d";
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 460px) {
+    width: 230px;
+  }
+}
+
+.toggle {
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 60px;
+    height: 50px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+    background: $pink;
+
+    &::before {
+      content: "\f003";
+      font-family: fontAwesome;
+      color: white;
+      font-size: 40px;
+    }
+  }
+}
+.banner-slider {
+  background-image: url(../images/Banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 540px;
+
+  img {
+    margin: 60px 0;
+  }
+
+  h1 {
+    color: white;
+    font-size: 26px;
+    letter-spacing: 3px;
+  }
+
+  h2 {
+    color: white;
+    letter-spacing: 2px;
+  }
+
+  p {
+    @include bannerButton;
+  }
+
+  @media (max-width: 992px) {
+    .container {
+      margin-left: 20px;
+      max-width: 50%;
+      padding-right: 30px;
+    }
+  }
+
+  @media (max-width: 730px) {
+    .container {
+      max-width: 100%;
+    }
+  }
+}
+
+/*Bone Marrow Transplant Section Styles */
+
+.bone-marrow-section {
+  @include mt3;
+
+  h5 {
+    @include h5styles;
+    color: white;
+    font-size: 17px;
+    line-height: 24px;
+    background-image: linear-gradient(-35deg, #6078ea 0%, #2ec4b8);
+    border-radius: 4px;
+    max-width: 604px;
+    max-height: 96px;
+    padding: 20px;
+    margin: 20px 20px 40px 20px;
+  }
+
+  h6 {
+    @include h6styles;
+    @include hr-line;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 20px 0 20px 26px;
+    padding: 0 0 20px 0;
+
+    &:last-child {
+      border-bottom: none !important;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    margin-top: 40px !important;
+    margin-bottom: 30px !important;
+    img {
+      max-width: 98%;
+    }
+    h5 {
+      max-height: 172px;
+      margin: 0px 10px 10px 20px;
+    }
+    h6 {
+      margin: 20px 26px;
+      padding: 0 10px 5px 0;
+    }
+  }
+  @media (max-width: 576px) {
+    img {
+      width: 98%;
+    }
+    .col-12 {
+      margin-top: 30px;
+    }
+  }
+}
+
+/* Doctors Section Styles */
+
+.text-color {
+  color: $secondary;
+  margin-bottom: 30px;
+  @include h2styles;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+.nowrap {
+  .row {
+    flex-wrap: nowrap;
+  }
+
+  @media (max-width: 768px) {
+    .row {
+      flex-wrap: wrap;
+    }
+  }
+}
+.doctor-section {
+  .col-md-6 {
+    background-color: #f9f9ff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px;
+    margin: 0 15px;
+    max-width: 46%;
+  }
+
+  .container {
+    @include hr-line;
+  }
+  .card {
+    background-color: transparent !important;
+    border: none !important;
+    margin-bottom: 30px;
+  }
+  .solid-line {
+    border: 1px solid $secondary;
+    width: 37px;
+    height: 1px;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  h5 {
+    color: $secondary;
+    font-size: 24px;
+    line-height: 44px;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  img {
+    width: 272px;
+    height: 160px;
+    margin: auto;
+  }
+  .card-body {
+    width: 450px;
+  }
+
+  h3 {
+    @include h3styles;
+    color: $primary;
+    line-height: 30px;
+  }
+  .card-text {
+    color: $primary;
+    font-weight: 600;
+  }
+  h6 {
+    @include h6styles;
+    font-size: 15px;
+  }
+
+  a {
+    @include primary-btn;
+  }
+  p {
+    margin-bottom: 30px;
+  }
+  .last-section-cards {
+    padding: 10px 30px 0;
+    .container {
+      border-bottom: none !important;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .col-md-6 {
+      max-width: 50%;
+      padding: 30px 0;
+    }
+  }
+  @media (max-width: 1000px) {
+    img {
+      margin-left: 30px;
+    }
+    .card-body {
+      width: 300px;
+    }
+    @media (max-width: 768px) {
+      .col-sm-12 {
+        max-width: 94%;
+        width: 100%;
+        padding: 15px 0;
+      }
+      img {
+        margin-left: auto;
+      }
+      .card-body {
+        width: 100%;
+      }
+    }
+  }
+}
+/*Types of Bone Marrow Transplant Section Styles*/
+
+.types-section {
+  @include mt3;
+  h2 {
+    @include h2styles;
+    color: $secondary;
+    margin-bottom: 20px;
+  }
+  ul {
+    list-style-image: url(../images/plus-logo.png);
+
+    li {
+      @include listyles;
+      line-height: 34px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    margin-top: 40px !important;
+    margin-bottom: 30px !important;
+  }
+}
+
+/*warning Signs Section Styles*/
+
+.warning-signs-section {
+  h2 {
+    @include h2styles;
+    color: $secondary;
+    margin-bottom: 40px;
+  }
+
+  .card-height {
+    min-height: 46px;
+  }
+
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #e5eaff;
+    border-radius: 4px;
+    box-shadow: 3px 5px 29px 0 rgba(187, 165, 228, 0.1);
+    width: 255px;
+    height: 170px;
+    padding: 30px 24px 15px;
+    margin-bottom: 30px;
+    @media (max-width: 1230px) {
+      width: 100%;
+    }
+  }
+  .card-body {
+    padding: 10px 0;
+  }
+
+  p {
+    @include pstyles;
+    font-weight: 600;
+  }
+}
+
+/*Accordion Section Styles*/
+
+.reader-styles {
+  @include mt3;
+  margin-top: 50px !important;
+
+  .accordion-button {
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #ececff !important;
+    font-family: "Stag Sans Medium";
+    color: $primary;
+    font-size: 20px;
+    line-height: 26px;
+    padding: 24px 20px 24px 0;
+  }
+  .accordion-button:not(.collapsed) {
+    color: $primary;
+    background-color: #ffffff;
+  }
+
+  .accordion-button:focus {
+    border-bottom: 1px solid #ececff !important;
+    border: none;
+    box-shadow: none;
+  }
+  .accordion-collapse {
+    border: none;
+  }
+  .accordion-body {
+    @include listyles;
+    background-color: #ffffff;
+    line-height: 30px;
+    padding: 16px 30px 0 0;
+    ul {
+      list-style-image: url(../images/double-tick-indicator.png);
+      li {
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    background-image: url(../images/Path.png);
+    transform: none;
+  }
+  .accordion-button::after {
+    content: "";
+    background-image: url(../images/Path.png) !important;
+  }
+}
+
+// Testimonials Styles
+
+#testimonials {
+  margin-bottom: 40px;
+  .img-box {
+    display: flex;
+  }
+
+  span {
+    font-size: 14px;
+    font-family: "Stag Sans Light";
+  }
+
+  .carousel-styles {
+    background-color: white;
+    flex: 0 0 auto;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 9px 8px 27px 0 rgba(0, 0, 0, 0.04);
+    width: 517px;
+    height: 249px;
+
+    .quotes-icon {
+      padding-left: 9rem;
+    }
+  }
+
+  h4 {
+    padding: 20px;
+    font-size: 22px;
+  }
+  p {
+    padding-top: 24px;
+
+    font-style: italic;
+  }
+}
+
+.testimonials {
+  @include mt3;
+  h2 {
+    @include h2styles;
+    margin-bottom: 30px;
+    color: $secondary;
+  }
+  h6 {
+    @include h6styles;
+    font-size: 16px;
+    font-weight: 600;
+    max-width: 58%;
+    @media (max-width: 768px) {
+      max-width: 92%;
+    }
+  }
+  p.Book-btn {
+    @include bannerButton;
+    background-color: #004498;
+    margin: auto;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+#customers-testimonials {
+  .item {
+    padding: 20px;
+    margin-bottom: 32px;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .shadow-effect {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 4px;
+    box-shadow: 9px 8px 27px 0 rgba(0, 0, 0, 0.04);
+  }
+  .owl-item.active.center .item {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  .owl-carousel .owl-item {
+    width: 517px !important;
+    height: 249px !important;
+  }
+
+  .img-box {
+    display: flex;
+  }
+  img {
+    transform-style: preserve-3d;
+    max-width: 90px;
+  }
+  h4 {
+    padding: 10px 20px 0 20px;
+    font-size: 22px;
+    text-align: left;
+  }
+  span {
+    font-size: 14px;
+    font-family: "Stag Sans Light";
+  }
+  .quotes-icon {
+    position: absolute;
+    right: 50px;
+    @media (max-width: 1000px) {
+      width: 36px;
+    }
+    @media (max-width: 766px) {
+      width: auto;
+    }
+    @media (max-width: 460px) {
+      width: 30px;
+    }
+  }
+  p {
+    padding-top: 24px;
+    font-family: "Stag Sans Light";
+    font-style: italic;
+    font-weight: 600;
+  }
+}
+
+#customers-testimonials.owl-carousel .owl-nav {
+  img {
+    position: absolute;
+    top: -92px;
+    padding-right: 4rem;
+    right: 0;
+    @media (max-width: 768px) {
+      top: -104px;
+    }
+    @media (max-width: 470px) {
+      top: -122px;
+    }
+  }
+
+  .prev-next-icon {
+    position: absolute;
+    right: 40px;
+  }
+}
+
+/*Footer Styles*/
+
+.footer-styles {
+  height: 250px;
+  background-color: #272727;
+  box-sizing: border-box;
+  padding: 30px 200px;
+  @media (max-width: 1200px) {
+    padding: 30px;
+  }
+
+  .image-list {
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    img {
+      padding-left: 10px;
+    }
+  }
+  p {
+    color: white;
+    @include pstyles;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.21);
+    height: 2px;
+    padding-top: 20px;
+  }
+  .arrow {
+    position: absolute;
+    right: 16%;
+    @media (max-width: 1200px) {
+      right: 8%;
+    }
+  }
+}
